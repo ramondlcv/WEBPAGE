@@ -32,25 +32,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border: 3px solid black; /* Borde de 3px en color negro */
         }
-         <script>
-        function actualizarContador() {
-            // Obtener el número de visitas almacenado
-            let visitas = localStorage.getItem("contadorVisitas");
-
-            // Si no existe, inicializar en 0
-            if (visitas === null) {
-                visitas = 0;
-            }
-
-            // Incrementar el contador
-            visitas++;
-
-            // Guardar el nuevo valor en localStorage
-            localStorage.setItem("contadorVisitas", visitas);
-
-            // Mostrar el contador en la página
-            document.getElementById("contador").innerText = `Número de visitas: ${visitas}`;
-        }
     </style>
 </head>
 <body>
