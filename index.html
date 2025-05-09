@@ -3,80 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con Imagen de Fondo</title>
+    <title>Portafolio Personal</title>
     <style>
-        /* Estilo para la imagen de fondo */
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://i.ytimg.com/vi/KRWtsYw59cc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDUNEjQRWf3MVIuXuChedgszXiBAw'); /* Cambia esta URL a tu imagen */
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
-            color: white;
+            background-color: pink;
+        }
+        header {
+            background: cyan;
+            color: black;
+            padding: 10px 0;
             text-align: center;
+            border: 3px solid black; /* Borde de 3px en color negro */
         }
-
-        /* Estilo para el contenedor principal */
         .container {
+            padding: 20px;
+        }
+        .projects {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            gap: 20px;
         }
-
-        /* Estilo para el botón */
-        .button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
+        .project {
+            background: cyan;
+            padding: 20px;
             border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-        .button:hover {
-            background-color: #218838;
-        }
-
-        /* Estilo para el contador */
-        .counter {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 3px solid black; /* Borde de 3px en color negro */
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>"BIENVENIDOS A MI PAGINA,MI PORTAFOLIO PERSONAL"</h1>
+    </header>
     <div class="container">
-        <h1>¡Bienvenidos a mi página!</h1>
-        <p>Explora el contenido y disfruta de la experiencia.</p>
-
-        <!-- Botón que redirige a otra página -->
-        <a href="https://www.google.com" target="_blank" class="button">Ir a otra página</a>
-
-        <!-- Contador de visitas -->
-        <div class="counter">
-            Visitas: <span id="visit-count">0</span>
+        <h2>PROYECTOS</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Proyecto 1</h3>
+                <p>Descripción del proyecto 1.</p>
+            </div>
+            <div class="project">
+                <h3>Proyecto 2</h3>
+                <p>Descripción del proyecto 2.</p>
+            </div>
         </div>
     </div>
-
-    <script>
-        // Código para el contador de visitas
-        document.addEventListener('DOMContentLoaded', () => {
-            // Obtener el contador de visitas del almacenamiento local
-            let visitCount = localStorage.getItem('visitCount') || 0;
-            visitCount++; // Incrementar el contador
-            localStorage.setItem('visitCount', visitCount); // Guardar en almacenamiento local
-
-            // Mostrar el contador de visitas en la página
-            document.getElementById('visit-count').textContent = visitCount;
-        });
-    </script>
 </body>
 </html>
+
